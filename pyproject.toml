@@ -60,6 +60,8 @@ neural = [
 ]
 
 [tool.uv]
+# Course notebooks use this project to manage dependencies, not install a package.
+package = false
 # Catch missing wheels for wheel-only dependencies (e.g. torch) when locking.
 # These checks include optional extras; they do not restrict the basic environment
 # to these platforms or guarantee wheels for packages with source distributions.
@@ -67,10 +69,3 @@ required-environments = [
     "sys_platform == 'win32' and platform_machine == 'AMD64' and python_version == '3.13'",
     "sys_platform == 'darwin' and platform_machine == 'arm64' and python_version == '3.13'",
 ]
-
-[project.scripts]
-dia-text-analysis = "dia_text_analysis:main"
-
-[build-system]
-requires = ["uv_build>=0.12.23,<0.13.0"]
-build-backend = "uv_build"

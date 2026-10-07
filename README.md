@@ -260,7 +260,7 @@ The green **Code** button opens this menu. **Select HTTPS** if you copy the URL 
    ```
 
    ```sh
-   uv sync --locked --no-install-project
+   uv sync --locked
    ```
 
 Opening a terminal in VS Code on macOS:
@@ -273,15 +273,12 @@ The integrated terminal appears at the bottom. Type commands at the cursor after
 
 The first installs Python 3.13. The second creates **`.venv`**, a folder containing this project's Python environment, and installs the versions recorded in **`uv.lock`**, including Jupyter and its Python kernel. The basic setup excludes the neural packages, which you add before Block 2. `--locked` makes uv stop if `pyproject.toml` and the lockfile disagree, instead of changing the lockfile. Wait for installation to finish without an error before continuing.
 
-> [!IMPORTANT]
-> Keep **`--no-install-project`** in the sync command. The repository currently declares a course package without its source module. This flag installs the locked dependencies while skipping that nonexistent package. It prevents the error **Expected a Python module at: src/dia_text_analysis/__init__.py**. You do not need to create a `src` folder.
+**Use `uv sync --locked` for this course, rather than installing `requirements.txt` or individual packages.** The lockfile also specifies versions of packages that our packages depend on. Do not edit it or run `uv lock` to fix a setup error; contact the instructor.
 
-**Use `uv sync --locked --no-install-project` for this course, rather than installing `requirements.txt` or individual packages.** The lockfile also specifies versions of packages that our packages depend on. Do not edit it or run `uv lock` to fix a setup error; contact the instructor.
-
-You do not need to activate `.venv` manually. After a successful sync, commands prefixed with **`uv run --no-sync`** use the installed course environment without attempting to build the nonexistent course package again. Run the appropriate sync command after pulling updates or whenever you need to install packages; `--no-sync` does not update them. For example:
+The project manages the course dependencies without building or installing a course package. No `src` folder is needed. You do not need to activate `.venv` manually. Commands prefixed with **`uv run --locked`** use the course environment, for example:
 
 ```sh
-uv run --no-sync python --version
+uv run --locked python --version
 ```
 
 This should print **Python 3.13.x**.
@@ -291,20 +288,20 @@ This should print **Python 3.13.x**.
 **The neural packages are required from Block 2 onwards.** Try installing them before Block 2, allowing time to resolve any problems. In the same project terminal, run:
 
 ```sh
-uv sync --locked --no-install-project --extra neural
+uv sync --locked --extra neural
 ```
 
 This adds the neural packages to the **same `.venv`**; you do not need a second environment. Use this setup on Windows x64 or Apple silicon macOS 14+, including an M1 Pro. Some API-based LLM notebooks also contain optional sentence-embedding examples that require this extra.
 
 Then run the neural import check in step 8. **If installation or the check fails, email hauke.licht@uibk.ac.at before Block 2.** Include your operating system and version, processor type, the command you ran, and the complete error message. Try the installation even if the compatibility table lists a limitation for your computer, and report the result so we can arrange an alternative setup. Do not install compilers or change dependency versions to work around an error.
 
-After syncing with `--extra neural`, use `uv run --no-sync` to run neural scripts in that installed environment. If you separately installed the Quarto application, you can also check its Jupyter setup with:
+When running neural scripts, use `uv run --locked --extra neural` to include the neural packages. If you separately installed the Quarto application, you can also check its Jupyter setup with:
 
 ```sh
-uv run --no-sync quarto check jupyter
+uv run --locked --extra neural quarto check jupyter
 ```
 
-After installing the extra, keep using `uv sync --locked --no-install-project --extra neural` when synchronising the full environment. **Running `uv sync --locked --no-install-project` without the extra returns to the basic setup and removes neural-only packages.** Restart a notebook's kernel after changing its installed packages.
+After installing the extra, keep using `uv sync --locked --extra neural` when synchronising the full environment. **Running `uv sync --locked` without the extra returns to the basic setup and removes neural-only packages.** Restart a notebook's kernel after changing its installed packages.
 
 **_Sources:_** [Installing Python with uv](https://docs.astral.sh/uv/guides/install-python/), [locking and syncing](https://docs.astral.sh/uv/concepts/projects/sync/), and [running project commands](https://docs.astral.sh/uv/concepts/projects/run/). -->
 
@@ -338,7 +335,7 @@ For **each Jupyter notebook** (`.ipynb`), also click **Select Kernel** at the to
 In the VS Code terminal, run:
 
 ```sh
-uv run --no-sync python -c "import sys, numpy, pandas, sklearn, ipykernel; print(sys.executable); print('Course environment OK')"
+uv run --locked python -c "import sys, numpy, pandas, sklearn, ipykernel; print(sys.executable); print('Course environment OK')"
 ```
 
 The path should end in `.venv\Scripts\python.exe` (Windows) or `.venv/bin/python` (macOS), followed by **Course environment OK**. This checks several core packages; it does not download models or test every exercise.
@@ -346,7 +343,7 @@ The path should end in `.venv\Scripts\python.exe` (Windows) or `.venv/bin/python
 <!-- **Before Block 2**, after installing the neural extra, also run:
 
 ```sh
-uv run --no-sync python -c "import torch, transformers, sentence_transformers, bertopic, umap, hdbscan; print('Neural environment OK')"
+uv run --locked --extra neural python -c "import torch, transformers, sentence_transformers, bertopic, umap, hdbscan; print('Neural environment OK')"
 ```
 
 This should print **Neural environment OK**. It checks imports without downloading a model or running GPU training. -->
@@ -360,10 +357,10 @@ print(sys.executable)
 
 It should show the same `.venv` path.
 
-<!-- If you installed the Quarto application and want to render documents, prefix its terminal commands with `uv run --no-sync` so it can find the course's Python and Jupyter, for example:
+<!-- If you installed the Quarto application and want to render documents, prefix its terminal commands with `uv run --locked` so it can find the course's Python and Jupyter, for example:
 
 ```sh
-uv run --no-sync quarto check jupyter
+uv run --locked quarto check jupyter
 ```
 
 If Quarto reports another Python installation, see the [official Python selection instructions](https://quarto.org/docs/computations/python.html). The `QUARTO_PYTHON` setting can point Quarto explicitly to your `.venv` Python. -->
@@ -393,13 +390,13 @@ git pull --ff-only
 After a successful pull, update the Python packages to match the new lockfile. During Block 1, run:
 
 ```sh
-uv sync --locked --no-install-project
+uv sync --locked
 ```
 
 <!-- **From Block 2 onwards**, use:
 
 ```sh
-uv sync --locked --no-install-project --extra neural
+uv sync --locked --extra neural
 ``` -->
 
 Restart any running notebook kernels after syncing. Keep copies of your completed exercises in a separate folder so you retain your work when course notebooks change. If Git says local changes would be overwritten, or that it cannot fast-forward, stop and email the instructor with the message. Keep your edited files; do not discard changes to make the pull succeed.
@@ -423,12 +420,12 @@ For questions about Rust, C++, CUDA, Windows runtime libraries, or model downloa
 | What you see | What to do |
 | --- | --- |
 | `uv`, `git`, or `quarto` is not recognised / command not found | Complete the relevant installation step, then close and reopen the terminal and VS Code. If needed, restart the computer. If it still fails, save the installer output and contact the instructor. |
-| `Failed to build dia-text-analysis` / `Expected a Python module at: src/dia_text_analysis/__init__.py` | Run `uv sync --locked --no-install-project` (add `--extra neural` for Block 2). After a successful sync, use `uv run --no-sync` for terminal commands. Do not create a source module or edit the lockfile. |
+| `Failed to build dia-text-analysis` / `Expected a Python module at: src/dia_text_analysis/__init__.py` | Your copy may have the old packaging configuration. Run `git pull --ff-only`, then `uv sync --locked` (add `--extra neural` for Block 2). The updated project installs dependencies only; no `src` folder is needed. If it still fails, send the error to the instructor. |
 | No `pyproject.toml` found | Open the folder containing `README.md`, `pyproject.toml`, and `uv.lock` in VS Code, then create a new terminal. |
 | The lockfile needs updating | Pull the latest course files from GitHub and retry the sync command. If it still fails, send the error to the instructor; keep `--locked` in the command. |
 | No compatible wheel/distribution, or a request for Rust, CMake, or C++ build tools | Check your processor, macOS version, and that Python is 3.13. See the compatibility table above and contact the instructor before installing build tools. |
-| Windows says `Activate.ps1` cannot run because scripts are disabled | You can use `uv sync --locked --no-install-project` and `uv run --no-sync` without activation. Select `.venv` in VS Code; no permanent execution-policy change is needed for this workflow. |
-| A notebook says `ModuleNotFoundError` or asks you to install `ipykernel` | Finish `uv sync --locked --no-install-project` (or add `--extra neural` for a neural notebook), then select the notebook's `.venv` kernel. Restart the kernel after changing packages or switching environments. |
+| Windows says `Activate.ps1` cannot run because scripts are disabled | You can use `uv sync --locked` and `uv run --locked` without activation. Select `.venv` in VS Code; no permanent execution-policy change is needed for this workflow. |
+| A notebook says `ModuleNotFoundError` or asks you to install `ipykernel` | Finish `uv sync --locked` (or add `--extra neural` for a neural notebook), then select the notebook's `.venv` kernel. Restart the kernel after changing packages or switching environments. |
 | Installation fails on a university-managed computer or a download is blocked | Send the full error to the instructor; institutional restrictions may require IT support. |
 
 For help, email **hauke.licht@uibk.ac.at** or [open an issue in this course repository](https://github.com/haukelicht/dia_text_analysis/issues). Include your operating system, processor type, the command you ran, and the complete error message. Do not include passwords or API keys.
