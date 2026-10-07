@@ -1,0 +1,12 @@
+.DS_Store
+**/.DS_Store
+
+admin/
+assignments/
+code/
+models/
+src/
+syllabus/
+
+README.html
+TODO.md

@@ -2,10 +2,18 @@
 
 This GitHub repository accompanies the DIA course "Introduction to computational text analysis" taught by Hauke Licht (hauke.licht@uibk.ac.at, University of Innsbruck) at the DA Vienna.
 
-Participants must **complete the basic computer setup below during Block 1** and **install and check the neural packages before Block 2**. These instructions assume no previous experience with a terminal.
+Participants must **complete the basic computer setup below during Block 1**.<!--and **install and check the neural packages before Block 2**.-->
+These instructions assume no previous experience with a terminal.
 <!-- Try the neural installation in advance and email **hauke.licht@uibk.ac.at** if you encounter installation issues, so we can arrange a working setup before Block 2. -->
 
 ## Computer setup
+
+> [!TIP]
+> **Want an AI assistant to help with setup?** This repository includes [AGENTS.md](AGENTS.md), a guide for assistants supporting students. Copy the prompt below into your coding assistant or AI chat:
+>
+> "Help me complete the computer setup for the DIA text analysis course. First read AGENTS.md in the root of the course repository and README.md, then follow the setup guidance in those files. I have little experience with terminals. Ask which operating system and processor I have and what I have already installed. Walk me through one step at a time and check the result before continuing. Help me complete the basic setup."
+>
+> If you have already cloned the repository, open its folder in your coding assistant. If you are using a chat assistant that cannot access the files, attach **AGENTS.md** and **README.md**, or paste their contents into the chat. You can obtain both from [the course repository on GitHub](https://github.com/haukelicht/dia_text_analysis) before installing anything. Confirm that the assistant can read them before following its instructions.
 
 <!-- Installation instructions and compatibility were checked on **6 October 2026**, using the official documentation linked below and this project's `uv.lock`. -->
 
@@ -26,6 +34,7 @@ There are two Python setups:
 2. **neural** for sentence embeddings, BERTopic/UMAP (Block 2), and transformer training (Block 3).
 
 Both are defined in [pyproject.toml](pyproject.toml) and installed from [uv.lock](uv.lock).
+For Block 1, the basic setup is sufficient.
 
 
 ### _Before you start:_ check your computer
@@ -274,11 +283,7 @@ uv run --locked python --version
 
 This should print **Python 3.13.x**.
 
-#### If you previously set up Python 3.11
-
-After pulling the updated project files from GitHub, run `uv python install 3.13` and then `uv sync --locked` (or `uv sync --locked --extra neural` for the full setup). uv will recreate the project's `.venv` for Python 3.13 when necessary. Reselect its interpreter and notebook kernel in VS Code, and restart any running kernels.
-
-#### Required before Block 2: install the neural packages
+<!-- #### Required before Block 2: install the neural packages
 
 **The neural packages are required from Block 2 onwards.** Try installing them before Block 2, allowing time to resolve any problems. In the same project terminal, run:
 
@@ -298,7 +303,7 @@ uv run --locked --extra neural quarto check jupyter
 
 After installing the extra, keep using `uv sync --locked --extra neural` when synchronising the full environment. **Running `uv sync --locked` without the extra returns to the basic setup and removes neural-only packages.** Restart a notebook's kernel after changing its installed packages.
 
-**_Sources:_** [Installing Python with uv](https://docs.astral.sh/uv/guides/install-python/), [locking and syncing](https://docs.astral.sh/uv/concepts/projects/sync/), and [running project commands](https://docs.astral.sh/uv/concepts/projects/run/).
+**_Sources:_** [Installing Python with uv](https://docs.astral.sh/uv/guides/install-python/), [locking and syncing](https://docs.astral.sh/uv/concepts/projects/sync/), and [running project commands](https://docs.astral.sh/uv/concepts/projects/run/). -->
 
 ### Step 7: Tell VS Code which Python to use
 
@@ -335,13 +340,13 @@ uv run --locked python -c "import sys, numpy, pandas, sklearn, ipykernel; print(
 
 The path should end in `.venv\Scripts\python.exe` (Windows) or `.venv/bin/python` (macOS), followed by **Course environment OK**. This checks several core packages; it does not download models or test every exercise.
 
-**Before Block 2**, after installing the neural extra, also run:
+<!-- **Before Block 2**, after installing the neural extra, also run:
 
 ```sh
 uv run --locked --extra neural python -c "import torch, transformers, sentence_transformers, bertopic, umap, hdbscan; print('Neural environment OK')"
 ```
 
-This should print **Neural environment OK**. It checks imports without downloading a model or running GPU training.
+This should print **Neural environment OK**. It checks imports without downloading a model or running GPU training. -->
 
 Open a course notebook, select its `.venv` kernel, and run a code cell using the triangle next to it. To check the notebook's Python, add and run a temporary code cell:
 
@@ -352,13 +357,13 @@ print(sys.executable)
 
 It should show the same `.venv` path.
 
-If you installed the Quarto application and want to render documents, prefix its terminal commands with `uv run --locked` so it can find the course's Python and Jupyter, for example:
+<!-- If you installed the Quarto application and want to render documents, prefix its terminal commands with `uv run --locked` so it can find the course's Python and Jupyter, for example:
 
 ```sh
 uv run --locked quarto check jupyter
 ```
 
-If Quarto reports another Python installation, see the [official Python selection instructions](https://quarto.org/docs/computations/python.html). The `QUARTO_PYTHON` setting can point Quarto explicitly to your `.venv` Python.
+If Quarto reports another Python installation, see the [official Python selection instructions](https://quarto.org/docs/computations/python.html). The `QUARTO_PYTHON` setting can point Quarto explicitly to your `.venv` Python. -->
 
 ### Keep the course materials up to date
 
@@ -370,17 +375,29 @@ git pull --ff-only
 
 This downloads and applies updates from GitHub. **Already up to date** means you have the latest files. Run this inside the course folder; you only clone once.
 
+**Important:** 
+If you have local changes that you do not want to lose, make sure to save them with a different filename before running `git pull`.
+The easiest way to avoid losing changes is to save a copy of the edited file with your name appended to the filename (e.g., `README.md` → `README_joe.md`).
+
+Should you get a message that local changes would be overwritten, it means you have unsaved edits in the course folder. Save your changes with a different filename and restore the given files, e.g.,
+
+```sh
+mv README.md README_joe.md
+git checkout -- README.md
+git pull --ff-only
+```
+
 After a successful pull, update the Python packages to match the new lockfile. During Block 1, run:
 
 ```sh
 uv sync --locked
 ```
 
-**From Block 2 onwards**, use:
+<!-- **From Block 2 onwards**, use:
 
 ```sh
 uv sync --locked --extra neural
-```
+``` -->
 
 Restart any running notebook kernels after syncing. Keep copies of your completed exercises in a separate folder so you retain your work when course notebooks change. If Git says local changes would be overwritten, or that it cannot fast-forward, stop and email the instructor with the message. Keep your edited files; do not discard changes to make the pull succeed.
 
