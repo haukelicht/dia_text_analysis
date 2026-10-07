@@ -12,7 +12,7 @@ Both configurations were installed in separate temporary Python 3.13.5 environme
 
 ## Basic and neural configurations
 
-`[project.dependencies]` defines the basic setup for Block 1, installed with `uv sync --locked`. `[project.optional-dependencies].neural` adds sentence embeddings, neural topic modelling, and transformer training, installed with `uv sync --locked --extra neural`. Although packaged as an extra, the neural setup is required from Block 2 onwards. Students should try installing and checking it before Block 2 and email **hauke.licht@uibk.ac.at** if they encounter installation issues.
+`[project.dependencies]` defines the basic setup for Block 1, installed with `uv sync --locked --no-install-project`. `[project.optional-dependencies].neural` adds sentence embeddings, neural topic modelling, and transformer training, installed with `uv sync --locked --no-install-project --extra neural`. Although packaged as an extra, the neural setup is required from Block 2 onwards. Students should try installing and checking it before Block 2 and email **hauke.licht@uibk.ac.at** if they encounter installation issues.
 
 The extra contains `accelerate`, `bertopic`, `bitsandbytes`, `datasets`, `hdbscan`, `protobuf`, `sentence-transformers`, `sentencepiece`, `tokenizers`, `torch`, `transformers`, and `umap-learn`. The basic setup retains data analysis, traditional machine learning, notebooks, and API clients including `openai` and `huggingface-hub`. The basic export contains no PyTorch, Transformers, BERTopic, Numba, or LLVM dependencies, including transitively. The lockfile now contains 203 package entries for Python 3.13. `tiktoken` was removed entirely because it has no published Windows ARM64 wheels and is not used in the current course code or notebooks. Selecting Python 3.13 also removes older Python-specific branches from the lockfile.
 
@@ -34,11 +34,11 @@ These limits are **inferred from actual locked artifacts**, rather than general 
 
 The Intel Mac Argon2 requirement uses a dependency marker to express a platform-specific version. An extra selects course functionality; it does not automatically pick older compatible versions for unsupported computers. See [uv's dependency documentation](https://docs.astral.sh/uv/concepts/projects/dependencies/).
 
-Keep `--extra neural` on subsequent full-environment syncs: `uv sync --locked` alone removes neural-only packages. Both configurations use the same `.venv` and `uv.lock`.
+Keep `--extra neural` on subsequent full-environment syncs: `uv sync --locked --no-install-project` alone removes neural-only packages. Both configurations use the same `.venv` and `uv.lock`.
 
 ## Native code and additional software
 
-A **wheel** contains an already-built package. A package can contain Rust, C, or C++ code without requiring students to install a compiler. For configurations with complete wheel coverage above, the relevant `uv sync --locked` command should use those wheels. The local course package uses the Python build backend `uv_build`; this does not require students to compile Rust.
+A **wheel** contains an already-built package. A package can contain Rust, C, or C++ code without requiring students to install a compiler. For configurations with complete wheel coverage above, the relevant `uv sync --locked --no-install-project` command should use those wheels. The repository currently declares the Python build backend `uv_build`, but the expected local course module is absent. The documented sync commands therefore use `--no-install-project` to install only third-party dependencies. Subsequent commands use `uv run --no-sync` so they do not trigger a build of the missing module. No placeholder source module is needed. See [uv’s project-installation options](https://docs.astral.sh/uv/concepts/projects/sync/#not-installing-the-current-project).
 
 | Dependency or group | Additional software considerations |
 | --- | --- |
