@@ -1,0 +1,7 @@
+2025/
+**/*.qmd
+**/__pycache__/
+**/.jupyter_cache/
+**/slides_files/
+**/*.pyc
+**/sandbox.ipynb
