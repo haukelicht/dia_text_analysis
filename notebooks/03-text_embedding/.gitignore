@@ -1,0 +1,7 @@
+*.md
+!sentence_cards.md
+!sentence_triplets.md
+*.qmd
+*.ipynb
+!sentence_embedding_and_clustering.ipynb
+

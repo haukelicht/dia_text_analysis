@@ -1,0 +1,7 @@
+*.md
+!sentence_examples.md
+*.qmd
+*.ipynb
+!clustering_and_bertopic.ipynb
+!assignment.ipynb
+
