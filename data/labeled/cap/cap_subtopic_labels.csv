@@ -1,0 +1,214 @@
+cap_subtopic,cap_subtopic_label,codebook_cap_topic
+100,General,1
+101,Interest Rates,1
+103,Unemployment Rate,1
+104,Monetary Policy,1
+105,National Budget,1
+107,Tax Code,1
+108,Industrial Policy,1
+110,Price Control,1
+199,Other,1
+200,General,2
+201,Minority Discrimination,2
+202,Gender Discrimination,2
+204,Age Discrimination,2
+205,Handicap Discrimination,2
+206,Voting Rights,2
+207,Freedom of Speech,2
+208,Right to Privacy,2
+209,Anti-Government,2
+299,Other,2
+300,General,3
+301,Health Care Reform,3
+302,Insurance,3
+321,Drug Industry,3
+322,Medical Facilities,3
+323,Insurance Providers,3
+324,Medical Liability,3
+325,Manpower,3
+331,Disease Prevention,3
+332,Infants and Children,3
+333,Mental Health,3
+334,Long-term Care,3
+335,Drug Coverage and Cost,3
+341,Tobacco Abuse,3
+342,Drug and Alcohol Abuse,3
+398,R&D,3
+399,Other,3
+400,General,4
+401,Trade,4
+402,Subsidies to Farmers,4
+403,Food Inspection & Safety,4
+404,Food Marketing & Promotion,4
+405,Animal and Crop Disease,4
+408,Fisheries & Fishing,4
+498,R&D,4
+499,Other,4
+500,General,5
+501,Worker Safety,5
+502,Employment Training,5
+503,Employee Benefits,5
+504,Labor Unions,5
+505,Fair Labor Standards,5
+506,Youth Employment,5
+529,Migrant and Seasonal,5
+599,Other,5
+600,General,6
+601,Higher,6
+602,Elementary & Secondary,6
+603,Underprivileged,6
+604,Vocational,6
+606,Special,6
+607,Excellence,6
+698,R&D,6
+699,Other,6
+700,General,7
+701,Drinking Water,7
+703,Waste Disposal,7
+704,Hazardous Waste,7
+705,Air Pollution,7
+707,Recycling,7
+708,Indoor Hazards,7
+709,Species & Forest,7
+711,Land and Water Conservation,7
+798,R&D,7
+799,Other,7
+800,General,8
+801,Nuclear,8
+802,Electricity,8
+803,Natural Gas & Oil,8
+805,Coal,8
+806,Alternative & Renewable,8
+807,Conservation,8
+898,R&D,8
+899,Other,8
+900,Immigration,9
+1000,General,10
+1001,Mass,10
+1002,Highways,10
+1003,Air Travel,10
+1005,Railroad Travel,10
+1007,Maritime,10
+1010,Infrastructure,10
+1098,R&D,10
+1099,Other,10
+1200,General,12
+1201,Agencies,12
+1202,White Collar Crime,12
+1203,Illegal Drugs,12
+1204,Court Administration,12
+1205,Prisons,12
+1206,Juvenile Crime,12
+1207,Child Abuse,12
+1208,Family Issues,12
+1210,Criminal & Civil Code,12
+1211,Crime Control,12
+1227,Police,12
+1299,Other,12
+1300,General,13
+1302,Low-Income Assistance,13
+1303,Elderly Assistance,13
+1304,Disabled Assistance,13
+1305,Volunteer Associations,13
+1308,Child Care,13
+1399,Other,13
+1400,General,14
+1401,Community Development,14
+1403,Urban Development,14
+1404,Rural Housing,14
+1405,Rural Development,14
+1406,Low-Income Assistance,14
+1407,Veterans,14
+1408,Elderly,14
+1409,Homeless,14
+1498,R&D,14
+1499,Other,14
+1500,General,15
+1501,Banking,15
+1502,Securities & Commodities,15
+1504,Consumer Finance,15
+1505,Insurance Regulation,15
+1507,Bankruptcy,15
+1520,Corporate Management,15
+1521,Small Businesses,15
+1522,Copyrights and Patents,15
+1523,Disaster Relief,15
+1524,Tourism,15
+1525,Consumer Safety,15
+1526,Sports Regulation,15
+1598,R&D,15
+1599,Other,15
+1600,General,16
+1602,Alliances,16
+1603,Intelligence,16
+1604,Readiness,16
+1605,Nuclear Arms,16
+1606,Military Aid,16
+1608,Personnel Issues,16
+1610,Procurement,16
+1611,Installations & Land,16
+1612,Reserve Forces,16
+1614,Hazardous Waste,16
+1615,Civil,16
+1616,Civilian Personnel,16
+1617,Contractors,16
+1619,Foreign Operations,16
+1620,Claims against Military,16
+1698,R&D,16
+1699,Other,16
+1700,General,17
+1701,Space,17
+1704,Commercial Use of Space,17
+1705,Science Transfer,17
+1706,Telecommunications,17
+1707,Broadcast,17
+1708,Weather Forecasting,17
+1709,Computers,17
+1798,R&D,17
+1799,Other,17
+1800,General,18
+1802,Trade Agreements,18
+1803,Exports,18
+1804,Private Investments,18
+1806,Competitiveness,18
+1807,Tariff & Imports,18
+1808,Exchange Rates,18
+1899,Other,18
+1900,General,19
+1901,Foreign Aid,19
+1902,Resources Exploitation,19
+1905,Developing Countries,19
+1906,International Finance,19
+1910,Western Europe,19
+1921,Specific Country,19
+1925,Human Rights,19
+1926,Organizations,19
+1927,Terrorism,19
+1929,Diplomats,19
+1999,Other,19
+2000,General,20
+2001,Intergovernmental Relations,20
+2002,Bureaucracy,20
+2003,Postal Service,20
+2004,Employees,20
+2005,Appointments,20
+2006,Currency,20
+2007,Procurement & Contractors,20
+2008,Property Management,20
+2009,Tax Administration,20
+2010,Scandals,20
+2011,Branch Relations,20
+2012,Political Campaigns,20
+2013,Census & Statistics,20
+2014,Capital City,20
+2015,Claims against the government,20
+2030,National Holidays,20
+2099,Other,20
+2100,General,21
+2101,National Parks,21
+2102,Indigenous Affairs,21
+2103,Public Lands,21
+2104,Water Resources,21
+2105,Dependencies & Territories,21
+2199,Other,21
+2300,General,23
