@@ -1,0 +1,24 @@
+leader_id,name,handle,country,country_iso3,office,n_tweets,first_tweet,last_tweet,total_retweets,total_replies,total_likes,total_quotes,mean_engagement,source_id_reliable,has_sentiment,populist,source_files
+nehammer,Karl Nehammer,karlnehammer,Austria,AUT,Chancellor,3565,2011-03-08 09:55:07+00:00,2023-06-20 18:57:28+00:00,157063,83187,154537,8878,113.23,False,False,,tweetsNEHAMMER.csv;tweetkarlnehammer.csv
+schallenberg,Alexander Schallenberg,a_schallenberg,Austria,AUT,Chancellor,556,2021-10-11 11:51:07+00:00,2023-06-07 12:02:54+00:00,17560,19614,42375,1361,145.52,True,False,,tweetsa_schallenberg.csv
+de_croo,Alexander De Croo,alexanderdecroo,Belgium,BEL,Prime Minister,9867,2010-01-04 20:37:26+00:00,2023-06-15 17:10:15+00:00,289603,125793,484502,22218,93.45,False,False,,tweetsDECROO.csv;tweetsalexanderdecroo.csv
+wilmes,Sophie Wilmès,Sophie_Wilmes,Belgium,BEL,Prime Minister,3139,2017-05-10 16:35:27+00:00,2023-05-24 13:05:41+00:00,61808,26870,244394,7355,108.45,False,False,,tweetSophie_Wilmes.csv
+berset,Alain Berset,alain_berset,Switzerland,CHE,President of the Confederation,1915,2010-11-20 16:05:08+00:00,2023-06-18 09:16:24+00:00,51727,39256,133800,6095,120.56,True,False,,tweetsBERSET.csv;tweetsalain_berset.csv
+cassis,Ignazio Cassis,ignaziocassis,Switzerland,CHE,President of the Confederation,1827,2012-12-02 19:53:52+00:00,2023-06-07 16:37:06+00:00,34968,21055,143919,5270,112.32,True,False,,tweetsignaziocassis.csv
+babis,Andrej Babiš,AndrejBabis,Czech Republic,CZE,Prime Minister,18211,2013-01-17 10:13:16+00:00,2023-06-07 20:28:46+00:00,1322650,513447,677775,35217,139.98,False,False,,tweetsAndrejBabis.csv
+fiala,Petr Fiala,P_Fiala,Czech Republic,CZE,Prime Minister,7958,2013-06-03 12:39:17+00:00,2023-06-20 19:03:09+00:00,216357,345740,3285823,27404,486.97,True,False,,tweetsFIALA.csv;tweetsP_Fiala.csv
+scholz,Olaf Scholz,OlafScholz,Germany,DEU,Chancellor,6471,2010-04-12 09:13:24+00:00,2023-05-26 12:32:08+00:00,363398,168650,619276,31125,182.73,False,False,,tweetsSCHOLZ.csv;tweetsOlafScholz.csv
+sanchez,Pedro Sánchez,sanchezcastejon,Spain,ESP,Prime Minister,10585,2018-01-01 11:25:36+00:00,2023-06-20 21:52:47+00:00,4566059,4386008,10607811,690102,1913.08,False,True,,tweetsSanchez.csv
+macron,Emmanuel Macron,EmmanuelMacron,France,FRA,President,6724,2018-01-01 16:27:07+00:00,2023-06-20 21:36:49+00:00,6165048,4685960,35122251,1589906,7073.64,True,False,,tweetsMacron.csv
+johnson,Boris Johnson,BorisJohnson,United Kingdom,GBR,Prime Minister,5967,2015-04-01 21:05:04+00:00,2023-06-06 20:16:27+00:00,4332847,5500256,22280508,1208635,5584.42,True,False,,tweetsJohnson.csv
+may,Theresa May,theresa_may,United Kingdom,GBR,Prime Minister,1807,2016-06-30 08:05:36+00:00,2023-05-31 10:05:47+00:00,624294,741479,1792415,239588,1880.34,False,False,,tweetsMay.csv
+sunak,Rishi Sunak,RishiSunak,United Kingdom,GBR,Prime Minister,2924,2019-09-04 11:21:50+00:00,2023-06-20 16:30:46+00:00,1050893,1725766,6310265,361240,3231.25,True,True,,tweetsSUNAK.csv;tweetsRishiSunak.csv
+martin,Micheál Martin,MichealMartinTD,Ireland,IRL,Taoiseach,3796,2012-10-18 12:12:22+00:00,2023-06-07 17:01:07+00:00,162915,132981,881338,22896,316.16,True,False,,tweetsMichealMartinTD.csv
+varadkar,Leo Varadkar,LeoVaradkar,Ireland,IRL,Taoiseach,10323,2011-01-04 10:10:03+00:00,2023-06-20 16:58:31+00:00,884861,313076,2249250,85480,342.21,False,True,,tweetsVARADKAR.csv;tweetsLeoVaradkar.csv
+conte,Giuseppe Conte,GiuseppeConteIT,Italy,ITA,Prime Minister,2628,2018-05-24 18:22:55+00:00,2023-06-07 20:24:30+00:00,927803,884394,4621652,131238,2498.13,True,False,,tweetsGiuseppeConteIT.csv
+meloni,Giorgia Meloni,GiorgiaMeloni,Italy,ITA,Prime Minister,19785,2010-09-02 09:51:50+00:00,2023-06-20 19:16:35+00:00,3180201,2757312,12924283,330808,970.06,True,True,,tweetsMELONI.csv;tweetsGiorgiaMeloni.csv
+rutte,Mark Rutte,MinPres,Netherlands,NLD,Prime Minister,5946,2010-10-28 06:55:59+00:00,2023-06-20 17:48:09+00:00,290918,787637,1510652,100970,452.43,True,False,,tweetsRUTTE.csv;tweetsMinPres.csv
+gahr_store,Jonas Gahr Støre,jonasgahrstore,Norway,NOR,Prime Minister,3986,2010-02-14 20:50:38+00:00,2023-06-20 13:14:19+00:00,56050,19114,161182,2523,59.93,False,False,,tweetsGAHRSTORE.csv;tweetsjonasgahrstore.csv
+solberg,Erna Solberg,erna_solberg,Norway,NOR,Prime Minister,5990,2010-05-25 12:02:49+00:00,2023-06-07 19:23:10+00:00,271520,26590,313464,6090,103.12,False,False,,tweetserna_solberg.csv
+morawiecki,Mateusz Morawiecki,MorawieckiM,Poland,POL,Prime Minister,2263,2017-12-13 21:00:03+00:00,2023-06-20 18:37:09+00:00,488902,691149,2395121,63165,1607.75,True,False,,tweetsMORAWIECKI.csv;tweetsMorawieckiM.csv
+szydlo,Beata Szydło,BeataSzydlo,Poland,POL,Prime Minister,2499,2010-01-22 08:41:57+00:00,2023-06-07 13:27:00+00:00,290758,312630,1047174,28133,671.75,True,False,,tweetsBeataSzydlo.csv

@@ -6,8 +6,15 @@ post, identified by a unique `tweet_uid`. The file includes the original text,
 an English text version, country and language information, engagement counts,
 and model predictions that can help select material for a term paper.
 
-The corpus is a prepared subset of the Executive Social Media Database supplied
-for this course. The preparation selected European countries and the language
+The accompanying `leaders.csv` contains the **23 leaders represented in these
+tweets**, with their names, account handles, and offices. Join the files on
+`leader_id` to identify the author of each post.
+
+The corpus is a prepared subset of Juan S. Gómez Cruces's Executive Social Media
+Database. The course preparation adds English text versions and the policy/CAP
+model predictions described below. [Original dataset repository](https://github.com/juangomezcruces/Executive-Social-Media-Database)
+
+The preparation selected European countries and the language
 codes listed below. It retained posts with a missing tweet-type value and
 excluded those marked as replies, those with a reply target, and those beginning
 with `RT @`. These rules produced the 71,924 posts in this file. They operationalize
@@ -37,6 +44,45 @@ policy_tweets = tweets.loc[tweets["is_policy"]].copy()
 # CAP labels are populated for part of the file.
 cap_labeled = tweets.loc[tweets["cap_topic"].notna()].copy()
 ```
+
+## Adding leader information
+
+`leaders.csv` contains one row per `leader_id` in the course tweet file. This
+example continues from the preceding code and adds the leader's name, account
+handle, and office to each tweet.
+
+```python
+leaders = pd.read_csv(folder / "leaders.csv")
+leader_metadata = leaders[["leader_id", "name", "handle", "office"]]
+tweets_with_leaders = tweets.merge(
+    leader_metadata, on="leader_id", how="left", validate="many_to_one"
+)
+
+print(tweets_with_leaders[["name", "handle", "office", "text"]].head())
+```
+
+All 71,924 tweets match a leader entry. The names and handles come from the
+source database, which may record a historical account handle.
+
+| Columns in `leaders.csv` | Contents |
+| --- | --- |
+| `leader_id` | Unique key shared with the tweet file |
+| `name`, `handle` | Leader's name and account handle |
+| `country`, `country_iso3` | Country name and three-letter code |
+| `office` | Office recorded for the leader in the source database |
+| `n_tweets`, `first_tweet`, `last_tweet` | Number of posts and collection window in the source dataset |
+| `total_retweets`, `total_replies`, `total_likes`, `total_quotes`, `mean_engagement` | Engagement summaries from the source dataset |
+| `source_id_reliable`, `has_sentiment` | Source-ID reliability and availability of source sentiment annotations |
+| `populist`, `source_files` | Additional source classification and original filenames |
+
+The counts, date windows, and engagement summaries in this table refer to the
+source dataset before the course filters. Calculate summaries from
+`tweets.feather` when describing the course subset. `office` identifies the
+position associated with a leader, and the table provides no term dates for
+checking whether each post falls within that leader's time in office.
+`populist` is missing for all 23 selected leaders.
+
+## Original and English texts
 
 `text` contains the original post and `text_en` its English version. Both are
 populated throughout the file. For all 16,872 posts marked as English, the two
@@ -174,6 +220,24 @@ and the two CAP columns, all fields are populated. Engagement counts describe
 the source data's recorded values. The file contains no collection timestamp
 for interpreting them as counts at a common observation time.
 
+## Data source and citation
+
+Please cite the original Executive Social Media Database when using this course
+subset, and describe the course-specific selection, translation, and model
+classification steps in your methods section.
+
+Gómez Cruces, Juan S. (n.d.). *Executive Social Media Database* [Dataset].
+GitHub. [Repository](https://github.com/juangomezcruces/Executive-Social-Media-Database)
+
+The repository asks users to include the release tag they used. The release tag
+of the source file used for this course subset is not recorded in the supplied
+file. Add it to the citation if it can be established from the original download.
+[Source citation guidance](https://github.com/juangomezcruces/Executive-Social-Media-Database#licence-and-reuse)
+
+The accompanying leader metadata was downloaded through the official
+`leaders_tweets` Python package on 18 November 2026 from **release v2.0.0**.
+The saved `leaders.csv` retains only entries matching the course tweet file.
+When using this table, cite Gómez Cruces's dataset above with release v2.0.0.
+
 The statistics in this README were calculated from the supplied `tweets.feather`
-on 18 November 2026. Source information for the Executive Social Media Database
-is available from its creator. [Dataset information](https://juangomezcruces.github.io/datasets/)
+on 18 November 2026.
