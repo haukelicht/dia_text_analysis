@@ -108,7 +108,7 @@ async def _process_texts_async(client, prompt, texts, model_id, max_concurrent, 
             await asyncio.gather(*(classify(index, text) for index, text in enumerate(texts)))
 
 
-def classify_text_concurrently(client, prompt, texts, *, model_id=MODEL_ID, max_concurrent=4):
+def classify_texts_concurrently(client, prompt, texts, *, model_id=MODEL_ID, max_concurrent=4):
     """Classify texts in parallel, marking unfinished rows if the cell is interrupted."""
     if not isinstance(max_concurrent, int) or isinstance(max_concurrent, bool) or max_concurrent < 1:
         raise ValueError("max_concurrent must be a positive integer.")
