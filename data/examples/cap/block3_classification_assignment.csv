@@ -1,0 +1,81 @@
+text_id,text,split,reference_label
+USA_61320_0017624,"Democrats will restore U.S.-Palestinian diplomatic ties and critical assistance to the Palestinian people in the West Bank and Gaza, consistent with U.S. law.",test,
+GBR_0029699,We will meet the UK’s obligations to the developing world by committing to spending 0.7 per cent of GNI on aid,test,
+USA_61320_0015506,"Democrats recognize and honor all the professionals who work in public schools to support students' education-teachers, education support professionals, and specialized staff.",test,
+USA_61620_0013838,"While we have hopes for the peace process, our commitment to the security of Israel is an overriding moral and strategic concern.",dev,Security/defence
+USA_61620_0015401,"President Bush and Congress have increased funding for veterans services, including substantial increases in Veterans' Administration (VA) health care funding.",dev,Not foreign policy
+USA_61320_0017445,"That's why the reinvention of American leadership demands we put democratic values at the core of our foreign policy, with renewed strategies and tools for a new era.",test,
+USA_61620_0015936,America's diplomatic establishment must energetically represent our country's agenda to the world.,test,
+USA_61320_0010839,We must encourage the renovation and construction of affordable housing closer to places of work and to mass transit so workers can get to their jobs without being tied up in traffic for hours.,test,
+USA_61320_0007174,"In assuring orderly foreign trade, the U.S. must require observance of our trade laws, as well as cooperation with our trade policies if economic disruption is to be avoided.",test,
+USA_61620_0005800,"As a cornerstone of the Western Alliance, NATO has stood on the firm foundations of American strategic strength, joint Allied defense efforts, and cooperative diplomacy based on shared interest and close consultations.",test,
+GBR_0031389,"This will break the formal link between British courts and the European Court of Human Rights, and make our own Supreme Court the ultimate arbiter of human rights matters in the UK.",test,
+USA_61620_0012257,A Republican administration will ensure foreign aid is cost-effective and based on its important role in directly promoting American national interests.,test,
+USA_61320_0013205,"We must also forge a more effective framework in Asia that goes beyond bilateral agreements, occasional summits, and ad hoc diplomatic arrangements.",test,
+GBR_0024475,"We will also press for reform of the World Bank and IMF to improve transparency, give more say to developing countries",test,
+USA_61320_0009568,The United States must act effectively as an honest broker in the peace process.,test,
+USA_61320_0000279,We pledge aid to the Arab States to enable them to develop their economic resources and raise the living standards of their people.,test,
+GBR_0029804,Liberal Democrats will put British values of fairness and the rule of law back at the heart of our foreign policy,test,
+USA_61320_0017428,"We will build on this foundation to negotiate arms control agreements that reflect the emergence of new players like China, capture new technologies, and move the world back from the nuclear precipice.",test,
+USA_61320_0015749,We will continue the work of this administration to ensure that Iran never acquires a nuclear weapon and will not hesitate to take military action if Iran races towards one.,test,
+USA_61320_0015532,"We are going to fight to make sure every American has access to quality, affordable health care.",test,
+GBR_0029698,"We will strive for global nuclear disarmament, showing leadership by committing not to replace the Trident nuclear weapons system on a like-for-like basis",test,
+GBR_0034427,"The UK secures many benefits from immigration, which boosts our economy and helps staff our public services, especially our NHS.",test,
+USA_61320_0015076,Trade agreements should crack down on the unfair and illegal subsidies other countries grant their businesses at the expense of ours.,dev,International trade
+USA_61620_0014397,Republicans affirm that America must deploy the technologies necessary to protect our people.,test,
+GBR_0035187,Fears of what TTIP might contain precisely illustrate why UKIP believes we should leave the EU and negotiate our own free trade agreements again.,test,
+USA_61320_0016248,Future trade agreements should build on the pro-labor provisions added to the United States-Mexico-Canada Agreement (USMCA) by Democratic members of Congress.,test,
+USA_61620_0015998,We will continue America's diplomatic efforts to secure a comprehensive and humane settlement for the people of the southern and western Sudan.,test,
+USA_61320_0007170,"Last year, we successfully concluded the Multilateral Trade Negotiations, an ambitious set of negotiations designed to reduce barriers to international trade.",test,
+GBR_0032795,"We will actively work to increase momentum on global multilateral disarmament efforts and negotiations, and look at further reductions in global stockpiles and the numbers of weapons.",test,
+USA_61320_0013361,"We must work together to pass immigration reform in a way that unites this country, not in a way that divides us by playing on our worst instincts and fears.",dev,Not foreign policy
+USA_61320_0015249,"We will provide resources to help overcome blight, expand Community Development Block Grant funds, provide more housing support to high-poverty communities, and build more affordable rental housing units.",test,
+USA_61620_0015029,The United States was the first country in the world to impose a safeguard action against Chinese textile and apparel imports and to file a case against China in the WTO.,test,
+USA_61320_0019609,And the Administration is supporting investments in climate infrastructure that make tangible progress on climate mitigation and adaptation while also helping developing countries unlock economic growth in key areas.,test,
+USA_61320_0017289,"Unfortunately, President Trump has orchestrated an American retreat from global bodies that weakens our influence, cedes ground to our adversaries, and puts global peace and prosperity in jeopardy.",test,
+USA_61320_0015820,"Democrats believe that LGBT rights are human rights and that American foreign policy should advance the ability of all persons to live with dignity, security, and respect, regardless of who they are or who they love.",dev,Other/unclear
+USA_61320_0011443,"The recently-held Camp David summit, while failing to bridge all the gaps between Israel and the Palestinians, demonstrated President Clinton's resolve to do all the United States could do to bring an end to that long conflict.",test,
+USA_61320_0014413,"Moving forward, President Obama and the Democratic Party are committed to building a robust, long-term strategic partnership with a sovereign, united, and democratic Iraq in all fields - diplomatic, economic, and security - based on mutual interests and mutual respect.",dev,Diplomacy
+GBR_0003285,We wish to see NATO itself develop a non-nuclear strategy.,dev,Security/defence
+GBR_0010798,"Since the 'Right to Buy' was introduced in 1980, we have enabled almost 90,000 council and housing association tenants to buy their own homes.",dev,Not foreign policy
+USA_61620_0017805,"Because parents are a child's first teachers, we support family literacy programs, which improve the reading, language, and life skills of both parents and children from low-income families.",test,
+USA_61620_0019774,"In today's world of complex challenges, international assistance is a critical tool for advancing America's security and economic interests by preventing conflict, building stability, opening markets for private investment, and responding to suffering and need with the compassion that is at the heart of our country's values.",dev,Aid
+USA_61620_0012509,"We must be at the table when trade agreements are negotiated, make the interests of American workers and farmers paramount, and ensure that the drive to open new markets is successful.",test,
+USA_61320_0013294,We also support the adoption of humanitarian licensing policies that ensure medications developed with the U.S. taxpayer dollars are available off patent in developing countries.,dev,Other/unclear
+GBR_0028979,"We have shown in Afghanistan and elsewhere that our military, diplomats and development staff can set an international standard for joint working, but we will not put the aid budget under military control",dev,Aid
+USA_61320_0013281,The U.S. must lead global efforts to promote international humanitarian standards and to protect civilians from indiscriminate violence during warfare.,test,
+USA_61320_0007252,The establishment of normal diplomatic and economic relations with China is an historic foreign policy achievement.,test,
+USA_61320_0019610,"In response to the rise of authoritarianism across the globe, President Biden convened two Summits for Democracy, bringing allies and partners together to strengthen democratic resilience, combat corruption, and promote human rights globally, including for LGBTQI+ persons.",test,
+USA_61620_0010195,We firmly endorse President Bush's policy to support the Republic of China on Taiwan in international trade and her accession to GATT.,test,
+USA_61320_0016119,"He launched a reckless trade war with China that cost more than 300,000 American jobs and sent farmers into bankruptcy, decimating the American heartland.",test,
+USA_61320_0014565,"We will consistently speak out for the importance of respecting the universal human rights of the Chinese people, including the right of the Tibetan people to preserve their cultural and religious identity.",test,
+USA_61620_0010196,"Major market access gains have been made with Japan, with American manufacturing exports tripling since 1985.",dev,International trade
+USA_61320_0017524,"At a moment when U.S.-Africa ties are increasingly important to our interests and our economy, and when our friends and rivals are investing more resources and diplomatic attention across the continent, the Trump Administration has treated Africa and its people with neglect and contempt.",test,
+USA_61320_0007081,"We support, through U.S. contributions to the UN High Commissioner for Refugees and other means, aid for the mounting Afghan refugee population in Pakistan and other desperate refugee situations.",dev,Aid
+GBR_0023232,We will support further action on debt relief and will work to meet the UN target of spending 0.7 per cent of national income on overseas aid by 2013,test,
+GBR_0036191,"UKIP will bring overseas aid spending into line with that of the United States, which has a very similar level of deficit and overall debt as a percentage of GNI to the UK.",test,
+USA_61620_0016081,"We call for a significant increase in political, economic, and diplomatic pressure to persuade Iran's rulers to halt their drive for a nuclear weapons capability, and we support tighter sanctions against Iran and the companies with business operations in or with Iran.",test,
+USA_61620_0005872,Republicans pledge to reestablish close and cooperative relations with the nations of Central and South America and repair the diplomatic damage done by the Carter Administration.,dev,Diplomacy
+USA_61620_0019637,We recognize Jerusalem as the eternal and indivisible capital of the Jewish state and call for the American embassy to be moved there in fulfillment of U.S. law.,test,
+USA_61320_0017569,And we will not forget the people of North Korea-Democrats will support humanitarian aid and pressure the regime to cease its gross human rights abuses.,dev,Other/unclear
+USA_61320_0013096,We will make the goal of eliminating nuclear weapons worldwide a central element of U.S. nuclear weapons policy.,dev,Security/defence
+USA_61320_0015480,It is unacceptable that for-profit schools with low graduation rates keep encouraging their students to take out federal loans they will have trouble paying back.,dev,Not foreign policy
+USA_61620_0008988,"Under Republican leadership, the United States will explore every opportunity to move forward the peace process toward direct negotiations as long as the security of Israel is not compromised.",dev,Diplomacy
+USA_61620_0013772,"The United States should promote reconciliation and friendship not only between the United States and Russia, but also between Russia and its neighbors.",dev,Diplomacy
+GBR_0014374,"We would expect the increased responsibility of head-teachers, and their role in achieving efficiency-savings, to be recognised by their pay review body.",test,
+USA_61320_0012086,We will build on and strengthen the progress made in the Jordan agreement to include strong and enforceable labor and environmental standards in the core of new free trade agreements.,test,
+USA_61620_0014684,"The President has strengthened this new relationship by concluding the historic Moscow Treaty on Strategic Reductions, which will reduce the nuclear arsenals of our two nations to their lowest levels in decades.",dev,Security/defence
+USA_61320_0013297,We will leverage the engagement of the private sector and private philanthropy to launch Health Infrastructure 2020-a global effort to work with developing countries to invest in the full range of infrastructure needed to improve and protect both American and global health.,test,
+USA_61620_0007326,"The Soviet Union has rejected every invitation by President Reagan to resume talks, refusing to return unless we remove the Pershing II and Cruise missiles which we have placed in Europe at the request of our NATO allies.",test,
+USA_61320_0016272,"We will ensure all federally supported housing projects, from new builds to retrofits, include mandatory requirements for labor standards, accessibility, and civil rights protections.",test,
+GBR_0029757,• Support a global fund for social protection to help developing countries build viable welfare systems,test,
+GBR_0032817,"We will establish a Centre for Universal Health Coverage to provide the support, encouragement, and global partnerships needed to help countries provide free healthcare.",dev,Aid
+USA_61320_0015062,"Democrats acknowledge that for millions of Americans, global trade has failed to live up to its promise-with too many countries breaking the rules and too many corporations outsourcing jobs at the expense of American workers and communities.",test,
+USA_61320_0016009,"We will stand up to the forces of authoritarianism, not aid and abet their rise, and we will speak and act with clarity and purpose on behalf of human rights wherever they are under threat.",test,
+USA_61620_0015944,"We advocate the establishment of an Inter- Agency Task Force on Human Trafficking, reporting directly to the President, and call for increased diplomatic efforts with foreign governments that have been negligent toward this evil.",test,
+USA_61620_0018277,"At the same time, we look to broaden our trade agreements with countries which share our values and commitment to fairness, along with transparency in our commercial and business practices.",dev,International trade
+GBR_0020911,We will continue to help developing countries exercise their rights within the WTO,dev,International trade
+USA_61620_0019685,"With bipartisan support, President Truman forged the North Atlantic Treaty Organization (NATO) as an alliance of the western democracies.",test,
+GBR_0004174,The Alliance holds that Britain's security as a country depends on the cohesion and effectiveness of the NATO alliance;,test,
+USA_61320_0013102,We will work to prevent the spread of nuclear weapons technology so that countries cannot build-or come to the brink of building-a weapons program under the guise of developing peaceful nuclear power.,test,
+USA_61620_0014454,Republicans will continue to make the protection and promotion of religious freedom abroad a cardinal principle of our foreign policy.,dev,Other/unclear
